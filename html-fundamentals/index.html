@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Fundamentals Lab</title> </head>
+    <style>
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        background-color: #0b1120;
+        margin: 0;
+        padding: 0;
+        color: #f3f4f6;
+    }
+
+
+    header {
+        background-color: #070045;
+        color: #485f99;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(41, 40, 40, 0.1);
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 10px;
+        font-size: 60px;
+
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    nav h1 {
+        color: #006eff;
+    }
+
+
+    main {
+        max-width: 800px;
+        margin: 20px auto;
+        background: #0b1120;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    section, article {
+        margin-bottom: 30px;
+        color: white;
+    }
+
+    h1, h2, h3 {
+        color: #1ae1e8;
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid #242b34;
+        margin: 20px 0;
+    }
+
+
+    form {
+        background: #f3f4f6;
+        padding: 20px;
+        border-radius: 5px;
+        border: 1px solid #0b1120;
+        color: #333;
+    }
+
+    article h2 {
+        color: #1ae1e8;
+        text-align: center;
+    }
+
+    input[type="text"], 
+    input[type="email"], 
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0 20px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #17c9ab;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background-color: #1557b0;
+    }
+
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9em;
+        color: #777;
+    }
+</style>
+<body>
+
+    <header>
+        <nav>
+            <a href="https://myskillwallet.ai/">Skill Wallet</a>
+        <h1>HTML Fundamentals Lab</h1>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Project Overview</h2>
+            <h3>Introduction to Tags</h3>
+            
+            <p>This page demonstrates the basic structure of an HTML document, including headings, forms, and semantic elements.</p>
+            
+            <p>Below this line is a horizontal rule. <br> I used a line break to get to this sentence.</p>
+            <hr>
+        </section>
+
+        <section>
+            <h2>Learning Lists</h2>
+            <h3>Steps to learn HTML:</h3>
+            <ol>
+                <li>Understand Document Structure</li>
+                <li>Learn Basic Tags</li>
+                <li>Master Forms</li>
+            </ol>
+
+            <h3>Commonly Used Semantic Tags:</h3>
+            <ul>
+                <li>Header</li>
+                <li>Main</li>
+                <li>Footer</li>
+            </ul>
+        </section>
+
+        <article>
+            <h2>Registration Form</h2>
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="user_name" placeholder="Enter your name"><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="user_email"><br><br>
+
+                <label for="pass">Password:</label><br>
+                <input type="password" id="pass" name="user_password"><br><br>
+
+                <label>Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br><br>
+
+                <input type="checkbox" id="terms" name="terms">
+                <label for="terms">I agree to the terms and conditions</label><br><br>
+
+                <button type="submit">Submit Form</button>
+            </form>
+        </article>
+    </main>
+
+    <footer>
+        <p>Lab Completed | &copy; 2026</p>
+    </footer>
+
+</body>
+</html>

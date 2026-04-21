@@ -1,0 +1,124 @@
+/* Step 4: Mobile-First Styling (Default) */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0b1120;
+    color: #f3f4f6;
+    line-height: 1.6;
+}
+
+/* Header & Nav */
+header {
+    background-color: #111827;
+    padding: 1rem;
+    border-bottom: 1px solid #1f2937;
+}
+
+nav {
+    display: flex;
+    flex-direction: column; /* stacked on mobile */
+    align-items: center;
+    gap: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main Content */
+.hero {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.grid-section {
+    padding: 2rem;
+}
+
+h2 {
+    text-align: center;
+    color: #1ae1e8;
+}
+
+/* Step 6.1: Grid Container Setup (Mobile - 1 Column) */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column by default */
+    gap: 20px; /* spacing between items */
+    margin-top: 20px;
+}
+
+.grid-card {
+    background-color: #1f2937;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #374151;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.grid-card h3 {
+    color: #1ae1e8;
+    margin-top: 0;
+}
+
+/* Step 5: Media Queries for Responsiveness */
+
+/* Tablet View (min-width: 768px) */
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 5%;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Subtask 6.2: 2 columns for tablet */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop View (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Subtask 6.2: 4 columns for desktop */
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .hero {
+        padding: 4rem 0;
+    }
+
+    .grid-card:hover {
+        transform: translateY(-10px);
+        border-color: #3b82f6;
+    }
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #111827;
+    margin-top: 3rem;
+    color: #6b7280;
+}

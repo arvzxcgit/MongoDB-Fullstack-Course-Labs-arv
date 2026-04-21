@@ -1,0 +1,44 @@
+/* Step 4: Styling both divs */
+body {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #0b1120; /* Dark background */
+}
+
+.box {
+    /* Subtask 4.1: Bold, font-size, and size */
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 50px;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
+
+/* Different background colors for each div */
+.div1 {
+    background-color: #3b82f6; /* Blue */
+}
+
+.div2 {
+    background-color: #059669; /* Green */
+}
+
+/* Step 5: Apply Media Queries */
+/* Subtask 5.1 & 5.2: Adjust layout for smaller screens */
+@media screen and (max-width: 768px) {
+    body {
+        /* Change alignment to vertical (stacking) */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 80%; /* Wider on small screens */
+        font-size: 1.5rem;
+    }
+}

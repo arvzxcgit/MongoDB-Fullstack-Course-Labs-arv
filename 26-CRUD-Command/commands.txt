@@ -1,0 +1,39 @@
+// Switch to the specific lab database
+use crudPracticeDB
+
+// CREATE: Adding a single task to the collection
+db.items.insertOne({
+  title: "Learn MongoDB",
+  description: "Practice CRUD operations",
+  status: "pending"
+});
+
+// CREATE: Adding multiple tasks at once
+db.items.insertMany([
+  { title: "Task 1", status: "pending" },
+  { title: "Task 2", status: "completed" }
+]);
+
+// READ: Getting everything in the items collection
+db.items.find().pretty();
+
+// READ: Finding only the pending tasks
+db.items.find({ status: "pending" });
+
+// UPDATE: Changing the status of Task 1 to completed
+db.items.updateOne(
+  { title: "Task 1" },
+  { $set: { status: "completed" } }
+);
+
+// UPDATE: Adding a priority field to all pending items
+db.items.updateMany(
+  { status: "pending" },
+  { $set: { priority: "high" } }
+);
+
+// DELETE: Removing Task 2 from the database
+db.items.deleteOne({ title: "Task 2" });
+
+// DELETE: Removing all items that are already finished
+db.items.deleteMany({ status: "completed" });
